@@ -281,6 +281,11 @@ const specMap = {
         argMap: [
         ]
     },
+    'prevCostume': {
+        opcode: 'looks_prevcostume',
+        argMap: [
+        ]
+    },
     'startScene': {
         opcode: 'looks_switchbackdropto',
         argMap: [
@@ -386,6 +391,11 @@ const specMap = {
     },
     'nextScene': {
         opcode: 'looks_nextbackdrop',
+        argMap: [
+        ]
+    },
+    'prevScene': {
+        opcode: 'looks_prevbackdrop',
         argMap: [
         ]
     },
