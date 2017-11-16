@@ -227,7 +227,9 @@ class Scratch3LooksBlocks {
             looks_switchbackdropto: this.switchBackdrop,
             looks_switchbackdroptoandwait: this.switchBackdropAndWait,
             looks_nextcostume: this.nextCostume,
+            looks_prevcostume: this.prevCostume,
             looks_nextbackdrop: this.nextBackdrop,
+            looks_prevbackdrop: this.prevBackdrop,
             looks_changeeffectby: this.changeEffect,
             looks_seteffectto: this.setEffect,
             looks_cleargraphiceffects: this.clearEffects,
@@ -337,6 +339,12 @@ class Scratch3LooksBlocks {
             util.target, util.target.currentCostume + 1, true
         );
     }
+    
+    prevCostume (args, util) {
+        this._setCostumeOrBackdrop(
+            util.target, util.target.currentCostume - 1, true
+        );
+    }
 
     switchBackdrop (args) {
         this._setCostumeOrBackdrop(this.runtime.getTargetForStage(), args.BACKDROP);
@@ -369,6 +377,13 @@ class Scratch3LooksBlocks {
         const stage = this.runtime.getTargetForStage();
         this._setCostumeOrBackdrop(
             stage, stage.currentCostume + 1, true
+        );
+    }
+    
+    prevBackdrop () {
+        const stage = this.runtime.getTargetForStage();
+        this._setCostumeOrBackdrop(
+            stage, stage.currentCostume - 1, true
         );
     }
 
